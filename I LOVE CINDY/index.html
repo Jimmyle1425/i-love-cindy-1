@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>I Love Cindy</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #ff69b4; /* Pink background */
+            font-family: Arial, sans-serif;
+        }
+        /* Unified styling for both texts */
+        .text {
+            color: #90ee90; /* Light green text */
+            font-family: 'Arial', sans-serif; /* Same font */
+            font-size: 2.5em; /* Same font size */
+            font-weight: bold; /* Bold text */
+            text-shadow: 2px 2px #ffb6c1; /* Same text shadow */
+            margin: 10px 0; /* Margin for spacing */
+        }
+        #flowers {
+            margin-top: 20px;
+            display: none; /* Initially hide the flowers */
+        }
+        #cheeseFry {
+            display: none; /* Initially hide the cheese fry text */
+        }
+        #clickableText {
+            cursor: pointer; /* Pointer cursor for clickable text */
+        }
+    </style>
+</head>
+<body>
+    <h1 id="clickableText" class="text">I Love Cindy <span id="clickMe">Click Me</span></h1>
+    <img id="flowers" src="C:\Users\jimmy\Desktop\I LOVE CINDY\images/pink.png" alt="Lilies and Tulips" width="400">
+    
+    <!-- Cheese Fry Text -->
+    <div id="cheeseFry" class="text">By your Cheese Fry</div>
+
+    <script>
+        const clickableText = document.getElementById('clickableText');
+        const flowers = document.getElementById('flowers');
+        const cheeseFry = document.getElementById('cheeseFry');
+        const clickMe = document.getElementById('clickMe');
+
+        clickableText.addEventListener('click', function() {
+            flowers.style.display = 'block'; // Show the flowers
+            cheeseFry.style.display = 'block'; // Show the cheese fry text
+            clickMe.style.display = 'none'; // Hide the Click Me text
+        });
+    </script>
+</body>
+</html>
